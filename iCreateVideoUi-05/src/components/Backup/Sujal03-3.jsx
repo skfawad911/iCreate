@@ -253,7 +253,7 @@ const Test = () => {
       doctorName: inputText,
     };
 
-    fetch(` http://ec2-3-110-221-106.ap-south-1.compute.amazonaws.com:8050/api/auth/submitUsage/${mrId}`, {
+    fetch(` http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/api/auth/submitUsage/${mrId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -384,7 +384,7 @@ const Test = () => {
         try {
           setLoading(true);
           const response = await axios.post(
-            " http://ec2-3-110-221-106.ap-south-1.compute.amazonaws.com:8050/api/auth/videoCon",
+            " http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/api/auth/videoCon",
             formData,
             {
               headers: {
@@ -1039,7 +1039,7 @@ const Test = () => {
         try {
           setLoading(true);
           const response = await axios.post(
-            " http://ec2-3-110-221-106.ap-south-1.compute.amazonaws.com:8050/api/auth/videoCon",
+            " http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/api/auth/videoCon",
             formData,
             {
               headers: {
@@ -1693,7 +1693,7 @@ const Test = () => {
         try {
           setLoading(true);
           const response = await axios.post(
-            " http://ec2-3-110-221-106.ap-south-1.compute.amazonaws.com:8050/api/auth/videoCon",
+            " http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/api/auth/videoCon",
             formData,
             {
               headers: {
@@ -2340,7 +2340,7 @@ const Test = () => {
         try {
           setLoading(true);
           const response = await axios.post(
-            " http://ec2-3-110-221-106.ap-south-1.compute.amazonaws.com:8050/api/auth/videoCon",
+            " http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/api/auth/videoCon",
             formData,
             {
               headers: {
@@ -2985,7 +2985,7 @@ const Test = () => {
         try {
           setLoading(true);
           const response = await axios.post(
-            " http://ec2-3-110-221-106.ap-south-1.compute.amazonaws.com:8050/api/auth/videoCon",
+            " http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/api/auth/videoCon",
             formData,
             {
               headers: {
@@ -3628,7 +3628,7 @@ const Test = () => {
         try {
           setLoading(true);
           const response = await axios.post(
-            " http://ec2-3-110-221-106.ap-south-1.compute.amazonaws.com:8050/api/auth/videoCon",
+            " http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/api/auth/videoCon",
             formData,
             {
               headers: {
@@ -4184,7 +4184,7 @@ const Test = () => {
       selectedGroup === "group6"
     ) {
       axios
-        .get(` http://ec2-3-110-221-106.ap-south-1.compute.amazonaws.com:8050/${videoname}`, {
+        .get(` http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/${videoname}`, {
           responseType: "arraybuffer",
         })
         .then((res) => {

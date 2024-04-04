@@ -63,7 +63,7 @@ app.get("*", (req, res) => {
 });
 
 //port...
-const port = process.env.PORT || 8050;
+const port = process.env.PORT || 80;
 
 // Listen port...
 const server = app.listen(port, () => {
