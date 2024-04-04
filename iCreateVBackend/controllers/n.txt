@@ -1,0 +1,47 @@
+//Server Code.....
+const ffmpeg = require('fluent-ffmpeg');
+const fs = require('fs');
+const path = require('path');
+
+// //Convert video into mp4 format....
+const videoConvertor = async (req, res) => {
+    try {
+        const { buffer, originalname } = req.file;
+
+        // Define the path where the uploaded video will be saved....
+        const uploadDir = path.join('S:/PROGRAMS/Mern_Stack Projects/Internship/winter/Server', 'uploads');
+        const videoFilePath = path.join(uploadDir, originalname);
+        console.log('videoFilePath', videoFilePath);
+
+        // Write the buffer to a file on the server
+        fs.writeFileSync(videoFilePath, buffer);
+
+        // Specify the output file path for the converted video....
+        // const outputFilePath = path.join('S:/PROGRAMS/Mern_Stack Projects/Internship/winter/Server', 'VideoOutput', 'originalname1.mp4');
+        const outputFilePath = path.join('S:/PROGRAMS/Mern_Stack Projects/Internship/winter/Server', 'VideoOutput', originalname.replace(/\.[^/.]+$/, ".mp4"));
+        console.log(outputFilePath);
+
+        // Convert the uploaded video to MP4 using ffmpeg
+        ffmpeg(videoFilePath)
+            .output(outputFilePath)
+            .videoCodec('libx264')
+            .audioCodec('aac')
+            .on('end', async() => {
+                console.log(`Video MP4 Conversion finished....`.bgCyan.white);
+                // Send the converted video file back to the client
+                res.status(200).sendFile(outputFilePath,()=>{
+                    // Remove both the uploaded and converted video files
+                    fs.unlinkSync(videoFilePath);
+                    fs.unlinkSync(outputFilePath);
+                });
+            })
+            .on('error', (err) => {
+                console.error('Error:', err);
+                res.status(500).end();
+            })
+            .run();
+    } catch (err) {
+        console.log(err);
+        res.status(501).send({ message: "Data is not sent." });
+    }
+}
