@@ -52,7 +52,7 @@ function Login() {
       e.preventDefault();
     
       try {
-        const response = await fetch("http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/api/auth/login", {
+        const response = await fetch("http://test-alb-1273731730.ap-south-1.elb.amazonaws.com:80/api/auth/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

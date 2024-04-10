@@ -83,7 +83,7 @@ const HomePage = () => {
                       }}
                     >
                       <source
-                        src={` http://test-alb-1788631499.ap-south-1.elb.amazonaws.com:80/${videoname.video}`}
+                        src={` http://test-alb-1273731730.ap-south-1.elb.amazonaws.com:80/${videoname.video}`}
                         type="video/mp4"
                       />
                     </video>
