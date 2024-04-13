@@ -260,7 +260,7 @@ const Template1 = () => {
     };
 
     fetch(
-      `http://test-alb-1273731730.ap-south-1.elb.amazonaws.com:80/api/auth/submitUsage/${mrId}`,
+      `http://test-alb-668998651.ap-south-1.elb.amazonaws.com:80/api/auth/submitUsage/${mrId}`,
       {
         method: "POST",
         headers: {
@@ -476,7 +476,7 @@ const Template1 = () => {
       try {
         setIsLoadingVideo1(true);
         const response = await fetch(
-          " http://test-alb-1273731730.ap-south-1.elb.amazonaws.com:80/api/auth/videoCon",
+          " http://test-alb-668998651.ap-south-1.elb.amazonaws.com:80/api/auth/videoCon",
           {
             method: "POST",
             body: formData,
@@ -737,7 +737,7 @@ const Template1 = () => {
   useEffect(() => {
     axios
       .get(
-        `  http://test-alb-1273731730.ap-south-1.elb.amazonaws.com:80/${videoname}`,
+        `  http://test-alb-668998651.ap-south-1.elb.amazonaws.com:80/${videoname}`,
         {
           responseType: "arraybuffer",
         }
