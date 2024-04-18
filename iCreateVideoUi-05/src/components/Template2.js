@@ -103,7 +103,7 @@ const Template2 = () => {
 
       try {
         const response = await fetch(
-          " http://test-alb-690112917.ap-south-1.elb.amazonaws.com/api/auth/videoCon",
+          " http://test-alb-213012948.ap-south-1.elb.amazonaws.com/api/auth/videoCon",
           {
             method: "POST",
             body: formData,
@@ -703,7 +703,7 @@ const Template2 = () => {
   useEffect(() => {
     axios
       .get(
-        ` http://test-alb-690112917.ap-south-1.elb.amazonaws.com/${videoname}`,
+        ` http://test-alb-213012948.ap-south-1.elb.amazonaws.com/${videoname}`,
         {
           responseType: "arraybuffer",
         }
