@@ -43,7 +43,7 @@ const HomePage = () => {
   // }, []);
 
   const fetchVideoName = () => {
-    fetch(" http://test-alb-213012948.ap-south-1.elb.amazonaws.com/api/auth/all-video-name")
+    fetch(" http://test-alb-246184203.ap-south-1.elb.amazonaws.com:8050/api/auth/all-video-name")
       .then((res) => res.json())
       .then((data) => {
         // Combine video data with imported poster images
@@ -120,7 +120,7 @@ const HomePage = () => {
                       poster={videoData.posterImage} // Assign the imported poster image
                     >
                       <source
-                        src={`http://test-alb-213012948.ap-south-1.elb.amazonaws.com/${videoData.video}`}
+                        src={`http://test-alb-246184203.ap-south-1.elb.amazonaws.com:8050/${videoData.video}`}
                         type="video/mp4"
                       />
                     </video>
