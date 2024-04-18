@@ -256,7 +256,7 @@ const Test = () => {
       doctorName: inputText,
     };
 
-    fetch(` http://test-alb-668998651.ap-south-1.elb.amazonaws.com:80/api/auth/submitUsage/${mrId}`, {
+    fetch(` http://test-alb-637128492.ap-south-1.elb.amazonaws.com:8050/api/auth/submitUsage/${mrId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -3821,7 +3821,7 @@ const Test = () => {
       selectedGroup === "group6"
     ) {
       axios
-        .get(` http://test-alb-668998651.ap-south-1.elb.amazonaws.com:80/${videoname}`, {
+        .get(` http://test-alb-637128492.ap-south-1.elb.amazonaws.com:8050/${videoname}`, {
           responseType: "arraybuffer",
         })
         .then((res) => {
