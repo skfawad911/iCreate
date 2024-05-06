@@ -272,7 +272,7 @@ const Template1 = () => {
       doctorName: inputText,
     };
 
-    fetch(` http://main-alb-773490635.ap-south-1.elb.amazonaws.com:8050/api/auth/submitUsage/${mrId}`, {
+    fetch(` http://check-alb-1122689352.ap-south-1.elb.amazonaws.com:8050/api/auth/submitUsage/${mrId}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -439,7 +439,7 @@ const Template1 = () => {
 
       try {
         const response = await fetch(
-          " http://main-alb-773490635.ap-south-1.elb.amazonaws.com:8050/api/auth/videoCon",
+          " http://check-alb-1122689352.ap-south-1.elb.amazonaws.com:8050/api/auth/videoCon",
           {
             method: "POST",
             body: formData,
@@ -668,7 +668,7 @@ const Template1 = () => {
   // Fetch the binary video data from the server
   useEffect(() => {
     axios
-      .get(` http://main-alb-773490635.ap-south-1.elb.amazonaws.com:8050/${videoname}`, {
+      .get(` http://check-alb-1122689352.ap-south-1.elb.amazonaws.com:8050/${videoname}`, {
         responseType: "arraybuffer",
       })
       .then((res) => {
